@@ -13,9 +13,7 @@ module Pod
 
     def perform
 
-      # keep_demo = configurator.ask_with_answers("Would you like to include a demo application with your library", ["Yes", "No"]).to_sym
-
-      # framework = configurator.ask_with_answers("Which testing frameworks will you use", ["Specta", "Kiwi", "None"]).to_sym
+      keep_demo = "NO"
       # case framework
       #   when :specta
       #     configurator.add_pod_to_podfile "Specta"
