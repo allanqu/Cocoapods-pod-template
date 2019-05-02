@@ -4,7 +4,7 @@ module Pod
     attr_reader :configurator
 
     def self.perform(options)
-#      new(options).perform
+      new(options).perform
     end
 
     def initialize(options)
