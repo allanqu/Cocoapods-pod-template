@@ -50,7 +50,7 @@ module Pod
       #         configurator.add_pod_to_podfile "Expecta+Snapshots"
       #         configurator.add_line_to_pch "@import Expecta_Snapshots;"
       #     end
-      end
+      # end
 
       prefix = nil
 
