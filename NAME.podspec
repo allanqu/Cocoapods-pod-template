@@ -30,7 +30,22 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = '${POD_NAME}/include/**/*'
+
+  s.default_subspec = 'Develop'
+
+  s.subspec 'Develop' do |ss|
+    ss.public_header_files = '${POD_NAME}/*.h', '${POD_NAME}/include/**/*.h'
+    ss.source_files = '${POD_NAME}/**/*.{h,m}'
+  end
+
+  s.subspec 'Release' do |ss|
+
+    ss.public_header_files = "#{s.name}.framework/Versions/A/**/*.h"
+    ss.preserve_paths = "*.framework"
+    ss.vendored_frameworks = "#{s.name}.framework"    
+  end
+
+  # s.source_files = '${POD_NAME}/include/**/*','${POD_NAME}/src/**/*'
 
   s.resources = '${POD_NAME}/resources/**/*.{txt,plist,js,xcassets}', '${POD_NAME}/resources/**/*.png', '${POD_NAME}/resources/**/*.strings','${POD_NAME}/resources/**/*.bundle','${POD_NAME}/resources/**/*.json','${POD_NAME}/resources/**/*.png','${POD_NAME}/resources/**/*.bundle','${POD_NAME}/resources/**/*.jpg'
 
