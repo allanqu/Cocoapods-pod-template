@@ -30,7 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = '${POD_NAME}/Classes/**/*'
+  s.source_files = '${POD_NAME}/include/**/*'
+  s.resources = '${POD_NAME}/resources/**/*.{txt,plist,js,xcassets}', '${POD_NAME}/resources/**/*.png', '${POD_NAME}/resources/**/*.strings','${POD_NAME}/resources/**/*.bundle','${POD_NAME}/resources/**/*.json','${POD_NAME}/resources/**/*.png','${POD_NAME}/resources/**/*.bundle','${POD_NAME}/resources/**/*.jpg'
+
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
@@ -38,5 +40,10 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks  = 'UIKit', 'Foundation', 'CoreMotion', 'CFNetwork', 'AVFoundation', 'Photos', 'CoreText', 'SystemConfiguration', 'CoreGraphics', 'CoreTelephony', 'CoreAudio','CoreVideo','Security','AssetsLibrary','Mediaplayer'
+  s.libraries = 'sqlite3', 'z', 'c++', 'z.1.2.5', 'sqlite3.0', 'z.1', 'resolv', 'c++abi', 'stdc++', 'iconv'
+  s.dependency 'BAFNetwork', '~> 1.0.1'
+  s.dependency 'BAFCategories', '~> 1.0.10'
+
+
 end
