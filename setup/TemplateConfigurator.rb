@@ -43,7 +43,7 @@ module Pod
       }
       print_info.call
 
-      answer = ""
+#      answer = ""
 
       loop do
         @message_bank.show_prompt
