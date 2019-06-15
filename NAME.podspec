@@ -34,8 +34,8 @@ TODO: Add long description of the pod here.
   s.default_subspec = 'Develop'
 
   s.subspec 'Develop' do |ss|
-    ss.public_header_files = '${POD_NAME}/include/*.h', '${POD_NAME}/*.h','${POD_NAME}/include/', '${POD_NAME}/src/'
-    ss.source_files = '${POD_NAME}/include/*.{h,m}', '${POD_NAME}/src/*.h'
+    ss.public_header_files = '${POD_NAME}/${POD_NAME}/include/*.h', '${POD_NAME}/${POD_NAME}/*.h','${POD_NAME}/${POD_NAME}/include/', '${POD_NAME}/${POD_NAME}/src/'
+    ss.source_files = '${POD_NAME}/${POD_NAME}/include/*.{h,m}', '${POD_NAME}/${POD_NAME}/src/*.h'
   end
 
   s.subspec 'Release' do |ss|
