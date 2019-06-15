@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = '${POD_NAME}'
-  s.version          = '0.1.1'
+  s.version          = '0.1.0'
   s.summary          = 'A short description of ${POD_NAME}.'
 
 # This description is used to generate tags and improve search results.
@@ -34,8 +34,8 @@ TODO: Add long description of the pod here.
   s.default_subspec = 'Develop'
 
   s.subspec 'Develop' do |ss|
-    ss.public_header_files = '${POD_NAME}/*.h', '${POD_NAME}/include/*.h'
-    ss.source_files = '${POD_NAME}/include/*.{h,m}', '${POD_NAME}/src/*.h'
+    ss.public_header_files = '${POD_NAME}/**/include/*.h', '${POD_NAME}/**/*.h'
+    ss.source_files = '${POD_NAME}/**/include/*.{h,m}', '${POD_NAME}/**/src/*.h'
   end
 
   s.subspec 'Release' do |ss|
